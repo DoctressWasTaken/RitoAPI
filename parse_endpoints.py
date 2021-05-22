@@ -15,7 +15,7 @@ class API:
         self.name = name
         self.url = url
         self.zones = {}
-        self.compiled = re.compile('^(/[^/]*/[^/]*[v\d]*/[^/]*)')
+        self.compiled = re.compile('^(/[^/]*/[^/]*/[v\d]*/[^/]+)')
 
         print("\nCreated API %s" % name)
         self.server = list()

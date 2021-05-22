@@ -6,11 +6,12 @@ apis:
     - ESPORTS
     - EUROPE
     zones:
-      /riot/account/v1:
-      - /accounts/by-puuid/{puuid}
-      - /accounts/by-riot-id/{gameName}/{tagLine}
-      - /accounts/me
-      - /active-shards/by-game/{game}/by-puuid/{puuid}
+      /riot/account/v1/accounts:
+      - /by-puuid/{puuid}
+      - /by-riot-id/{gameName}/{tagLine}
+      - /me
+      /riot/account/v1/active-shards:
+      - /by-game/{game}/by-puuid/{puuid}
   champion-mastery-v4:
     allowed_server:
     - BR1
@@ -25,10 +26,11 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/champion-mastery/v4:
-      - /champion-masteries/by-summoner/{encryptedSummonerId}
-      - /champion-masteries/by-summoner/{encryptedSummonerId}/by-champion/{championId}
-      - /scores/by-summoner/{encryptedSummonerId}
+      /lol/champion-mastery/v4/champion-masteries:
+      - /by-summoner/{encryptedSummonerId}
+      - /by-summoner/{encryptedSummonerId}/by-champion/{championId}
+      /lol/champion-mastery/v4/scores:
+      - /by-summoner/{encryptedSummonerId}
   champion-v3:
     allowed_server:
     - BR1
@@ -43,8 +45,8 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/platform/v3:
-      - /champion-rotations
+      /lol/platform/v3/champion-rotations:
+      - ''
   clash-v1:
     allowed_server:
     - BR1
@@ -59,12 +61,14 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/clash/v1:
-      - /players/by-summoner/{summonerId}
-      - /teams/{teamId}
-      - /tournaments
-      - /tournaments/by-team/{teamId}
-      - /tournaments/{tournamentId}
+      /lol/clash/v1/players:
+      - /by-summoner/{summonerId}
+      /lol/clash/v1/teams:
+      - /{teamId}
+      /lol/clash/v1/tournaments:
+      - ''
+      - /by-team/{teamId}
+      - /{tournamentId}
   league-exp-v4:
     allowed_server:
     - BR1
@@ -79,8 +83,8 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/league-exp/v4:
-      - /entries/{queue}/{tier}/{division}
+      /lol/league-exp/v4/entries:
+      - /{queue}/{tier}/{division}
   league-v4:
     allowed_server:
     - BR1
@@ -95,13 +99,17 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/league/v4:
-      - /challengerleagues/by-queue/{queue}
-      - /entries/by-summoner/{encryptedSummonerId}
-      - /entries/{queue}/{tier}/{division}
-      - /grandmasterleagues/by-queue/{queue}
-      - /leagues/{leagueId}
-      - /masterleagues/by-queue/{queue}
+      /lol/league/v4/challengerleagues:
+      - /by-queue/{queue}
+      /lol/league/v4/entries:
+      - /by-summoner/{encryptedSummonerId}
+      - /{queue}/{tier}/{division}
+      /lol/league/v4/grandmasterleagues:
+      - /by-queue/{queue}
+      /lol/league/v4/leagues:
+      - /{leagueId}
+      /lol/league/v4/masterleagues:
+      - /by-queue/{queue}
   lol-status-v3:
     allowed_server:
     - BR1
@@ -117,8 +125,8 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/status/v3:
-      - /shard-data
+      /lol/status/v3/shard-data:
+      - ''
   lol-status-v4:
     allowed_server:
     - BR1
@@ -134,8 +142,8 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/status/v4:
-      - /platform-data
+      /lol/status/v4/platform-data:
+      - ''
   lor-deck-v1:
     allowed_server:
     - AMERICAS
@@ -143,9 +151,9 @@ apis:
     - EUROPE
     - SEA
     zones:
-      /lor/deck/v1:
-      - /decks/me
-      - /decks/me
+      /lor/deck/v1/decks:
+      - /me
+      - /me
   lor-inventory-v1:
     allowed_server:
     - AMERICAS
@@ -153,17 +161,17 @@ apis:
     - EUROPE
     - SEA
     zones:
-      /lor/inventory/v1:
-      - /cards/me
+      /lor/inventory/v1/cards:
+      - /me
   lor-match-v1:
     allowed_server:
     - AMERICAS
     - ASIA
     - EUROPE
     zones:
-      /lor/match/v1:
-      - /matches/by-puuid/{puuid}/ids
-      - /matches/{matchId}
+      /lor/match/v1/matches:
+      - /by-puuid/{puuid}/ids
+      - /{matchId}
   lor-ranked-v1:
     allowed_server:
     - AMERICAS
@@ -171,8 +179,8 @@ apis:
     - EUROPE
     - SEA
     zones:
-      /lor/ranked/v1:
-      - /leaderboards
+      /lor/ranked/v1/leaderboards:
+      - ''
   lor-status-v1:
     allowed_server:
     - AMERICAS
@@ -180,8 +188,8 @@ apis:
     - EUROPE
     - SEA
     zones:
-      /lor/status/v1:
-      - /platform-data
+      /lor/status/v1/platform-data:
+      - ''
   match-v4:
     allowed_server:
     - BR1
@@ -196,22 +204,24 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/match/v4:
-      - /matches/by-tournament-code/{tournamentCode}/ids
-      - /matches/{matchId}
-      - /matches/{matchId}/by-tournament-code/{tournamentCode}
-      - /matchlists/by-account/{encryptedAccountId}
-      - /timelines/by-match/{matchId}
+      /lol/match/v4/matches:
+      - /by-tournament-code/{tournamentCode}/ids
+      - /{matchId}
+      - /{matchId}/by-tournament-code/{tournamentCode}
+      /lol/match/v4/matchlists:
+      - /by-account/{encryptedAccountId}
+      /lol/match/v4/timelines:
+      - /by-match/{matchId}
   match-v5:
     allowed_server:
     - AMERICAS
     - ASIA
     - EUROPE
     zones:
-      /lol/match/v5:
-      - /matches/by-puuid/{puuid}/ids
-      - /matches/{matchId}
-      - /matches/{matchId}/timeline
+      /lol/match/v5/matches:
+      - /by-puuid/{puuid}/ids
+      - /{matchId}
+      - /{matchId}/timeline
   spectator-v4:
     allowed_server:
     - BR1
@@ -226,9 +236,10 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/spectator/v4:
-      - /active-games/by-summoner/{encryptedSummonerId}
-      - /featured-games
+      /lol/spectator/v4/active-games:
+      - /by-summoner/{encryptedSummonerId}
+      /lol/spectator/v4/featured-games:
+      - ''
   summoner-v4:
     allowed_server:
     - BR1
@@ -243,12 +254,12 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/summoner/v4:
-      - /summoners/by-account/{encryptedAccountId}
-      - /summoners/by-name/{summonerName}
-      - /summoners/by-puuid/{encryptedPUUID}
-      - /summoners/me
-      - /summoners/{encryptedSummonerId}
+      /lol/summoner/v4/summoners:
+      - /by-account/{encryptedAccountId}
+      - /by-name/{summonerName}
+      - /by-puuid/{encryptedPUUID}
+      - /me
+      - /{encryptedSummonerId}
   tft-league-v1:
     allowed_server:
     - BR1
@@ -263,23 +274,28 @@ apis:
     - RU
     - TR1
     zones:
-      /tft/league/v1:
-      - /challenger
-      - /entries/by-summoner/{summonerId}
-      - /entries/{tier}/{division}
-      - /grandmaster
-      - /leagues/{leagueId}
-      - /master
-      - /rated-ladders/{queue}/top
+      /tft/league/v1/challenger:
+      - ''
+      /tft/league/v1/entries:
+      - /by-summoner/{summonerId}
+      - /{tier}/{division}
+      /tft/league/v1/grandmaster:
+      - ''
+      /tft/league/v1/leagues:
+      - /{leagueId}
+      /tft/league/v1/master:
+      - ''
+      /tft/league/v1/rated-ladders:
+      - /{queue}/top
   tft-match-v1:
     allowed_server:
     - AMERICAS
     - ASIA
     - EUROPE
     zones:
-      /tft/match/v1:
-      - /matches/by-puuid/{puuid}/ids
-      - /matches/{matchId}
+      /tft/match/v1/matches:
+      - /by-puuid/{puuid}/ids
+      - /{matchId}
   tft-summoner-v1:
     allowed_server:
     - BR1
@@ -294,12 +310,12 @@ apis:
     - RU
     - TR1
     zones:
-      /tft/summoner/v1:
-      - /summoners/by-account/{encryptedAccountId}
-      - /summoners/by-name/{summonerName}
-      - /summoners/by-puuid/{encryptedPUUID}
-      - /summoners/me
-      - /summoners/{encryptedSummonerId}
+      /tft/summoner/v1/summoners:
+      - /by-account/{encryptedAccountId}
+      - /by-name/{summonerName}
+      - /by-puuid/{encryptedPUUID}
+      - /me
+      - /{encryptedSummonerId}
   third-party-code-v4:
     allowed_server:
     - BR1
@@ -314,8 +330,8 @@ apis:
     - RU
     - TR1
     zones:
-      /lol/platform/v4:
-      - /third-party-code/by-summoner/{encryptedSummonerId}
+      /lol/platform/v4/third-party-code:
+      - /by-summoner/{encryptedSummonerId}
   tournament-stub-v4:
     allowed_server:
     - AMERICAS
@@ -334,8 +350,8 @@ apis:
     - LATAM
     - NA
     zones:
-      /val/content/v1:
-      - /contents
+      /val/content/v1/contents:
+      - ''
   val-match-v1:
     allowed_server:
     - AP
@@ -346,10 +362,12 @@ apis:
     - LATAM
     - NA
     zones:
-      /val/match/v1:
-      - /matches/{matchId}
-      - /matchlists/by-puuid/{puuid}
-      - /recent-matches/by-queue/{queue}
+      /val/match/v1/matches:
+      - /{matchId}
+      /val/match/v1/matchlists:
+      - /by-puuid/{puuid}
+      /val/match/v1/recent-matches:
+      - /by-queue/{queue}
   val-ranked-v1:
     allowed_server:
     - AP
@@ -359,8 +377,8 @@ apis:
     - LATAM
     - NA
     zones:
-      /val/ranked/v1:
-      - /leaderboards/by-act/{actId}
+      /val/ranked/v1/leaderboards:
+      - /by-act/{actId}
   val-status-v1:
     allowed_server:
     - AP
@@ -370,8 +388,8 @@ apis:
     - LATAM
     - NA
     zones:
-      /val/status/v1:
-      - /platform-data
+      /val/status/v1/platform-data:
+      - ''
 server:
 - AMERICAS
 - AP
