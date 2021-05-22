@@ -1,0 +1,397 @@
+apis:
+  account-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - ESPORTS
+    - EUROPE
+    zones:
+      /riot/account/v1:
+      - /accounts/by-puuid/{puuid}
+      - /accounts/by-riot-id/{gameName}/{tagLine}
+      - /accounts/me
+      - /active-shards/by-game/{game}/by-puuid/{puuid}
+  champion-mastery-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/champion-mastery/v4:
+      - /champion-masteries/by-summoner/{encryptedSummonerId}
+      - /champion-masteries/by-summoner/{encryptedSummonerId}/by-champion/{championId}
+      - /scores/by-summoner/{encryptedSummonerId}
+  champion-v3:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/platform/v3:
+      - /champion-rotations
+  clash-v1:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/clash/v1:
+      - /players/by-summoner/{summonerId}
+      - /teams/{teamId}
+      - /tournaments
+      - /tournaments/by-team/{teamId}
+      - /tournaments/{tournamentId}
+  league-exp-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/league-exp/v4:
+      - /entries/{queue}/{tier}/{division}
+  league-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/league/v4:
+      - /challengerleagues/by-queue/{queue}
+      - /entries/by-summoner/{encryptedSummonerId}
+      - /entries/{queue}/{tier}/{division}
+      - /grandmasterleagues/by-queue/{queue}
+      - /leagues/{leagueId}
+      - /masterleagues/by-queue/{queue}
+  lol-status-v3:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - PBE1
+    - RU
+    - TR1
+    zones:
+      /lol/status/v3:
+      - /shard-data
+  lol-status-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - PBE1
+    - RU
+    - TR1
+    zones:
+      /lol/status/v4:
+      - /platform-data
+  lor-deck-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    - SEA
+    zones:
+      /lor/deck/v1:
+      - /decks/me
+      - /decks/me
+  lor-inventory-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    - SEA
+    zones:
+      /lor/inventory/v1:
+      - /cards/me
+  lor-match-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    zones:
+      /lor/match/v1:
+      - /matches/by-puuid/{puuid}/ids
+      - /matches/{matchId}
+  lor-ranked-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    - SEA
+    zones:
+      /lor/ranked/v1:
+      - /leaderboards
+  lor-status-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    - SEA
+    zones:
+      /lor/status/v1:
+      - /platform-data
+  match-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/match/v4:
+      - /matches/by-tournament-code/{tournamentCode}/ids
+      - /matches/{matchId}
+      - /matches/{matchId}/by-tournament-code/{tournamentCode}
+      - /matchlists/by-account/{encryptedAccountId}
+      - /timelines/by-match/{matchId}
+  match-v5:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    zones:
+      /lol/match/v5:
+      - /matches/by-puuid/{puuid}/ids
+      - /matches/{matchId}
+      - /matches/{matchId}/timeline
+  spectator-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/spectator/v4:
+      - /active-games/by-summoner/{encryptedSummonerId}
+      - /featured-games
+  summoner-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/summoner/v4:
+      - /summoners/by-account/{encryptedAccountId}
+      - /summoners/by-name/{summonerName}
+      - /summoners/by-puuid/{encryptedPUUID}
+      - /summoners/me
+      - /summoners/{encryptedSummonerId}
+  tft-league-v1:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /tft/league/v1:
+      - /challenger
+      - /entries/by-summoner/{summonerId}
+      - /entries/{tier}/{division}
+      - /grandmaster
+      - /leagues/{leagueId}
+      - /master
+      - /rated-ladders/{queue}/top
+  tft-match-v1:
+    allowed_server:
+    - AMERICAS
+    - ASIA
+    - EUROPE
+    zones:
+      /tft/match/v1:
+      - /matches/by-puuid/{puuid}/ids
+      - /matches/{matchId}
+  tft-summoner-v1:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /tft/summoner/v1:
+      - /summoners/by-account/{encryptedAccountId}
+      - /summoners/by-name/{summonerName}
+      - /summoners/by-puuid/{encryptedPUUID}
+      - /summoners/me
+      - /summoners/{encryptedSummonerId}
+  third-party-code-v4:
+    allowed_server:
+    - BR1
+    - EUN1
+    - EUW1
+    - JP1
+    - KR
+    - LA1
+    - LA2
+    - NA1
+    - OC1
+    - RU
+    - TR1
+    zones:
+      /lol/platform/v4:
+      - /third-party-code/by-summoner/{encryptedSummonerId}
+  tournament-stub-v4:
+    allowed_server:
+    - AMERICAS
+    zones: {}
+  tournament-v4:
+    allowed_server:
+    - AMERICAS
+    zones: {}
+  val-content-v1:
+    allowed_server:
+    - AP
+    - BR
+    - ESPORTS
+    - EU
+    - KR
+    - LATAM
+    - NA
+    zones:
+      /val/content/v1:
+      - /contents
+  val-match-v1:
+    allowed_server:
+    - AP
+    - BR
+    - ESPORTS
+    - EU
+    - KR
+    - LATAM
+    - NA
+    zones:
+      /val/match/v1:
+      - /matches/{matchId}
+      - /matchlists/by-puuid/{puuid}
+      - /recent-matches/by-queue/{queue}
+  val-ranked-v1:
+    allowed_server:
+    - AP
+    - BR
+    - EU
+    - KR
+    - LATAM
+    - NA
+    zones:
+      /val/ranked/v1:
+      - /leaderboards/by-act/{actId}
+  val-status-v1:
+    allowed_server:
+    - AP
+    - BR
+    - EU
+    - KR
+    - LATAM
+    - NA
+    zones:
+      /val/status/v1:
+      - /platform-data
+server:
+- AMERICAS
+- AP
+- ASIA
+- BR
+- BR1
+- ESPORTS
+- EU
+- EUN1
+- EUROPE
+- EUW1
+- JP1
+- KR
+- LA1
+- LA2
+- LATAM
+- NA
+- NA1
+- OC1
+- PBE1
+- RU
+- SEA
+- TR1
