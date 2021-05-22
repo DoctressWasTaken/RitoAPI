@@ -332,14 +332,6 @@ apis:
     zones:
       /lol/platform/v4/third-party-code:
       - /by-summoner/{encryptedSummonerId}
-  tournament-stub-v4:
-    allowed_server:
-    - AMERICAS
-    zones: {}
-  tournament-v4:
-    allowed_server:
-    - AMERICAS
-    zones: {}
   val-content-v1:
     allowed_server:
     - AP

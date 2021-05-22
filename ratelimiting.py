@@ -20,8 +20,9 @@ class Limit:
     async def requested(self):
         now = datetime.now()
         if now > self.end:
-            print("Initiated bucket.")
+            print("Recreating bucket. Old bucket had %s/%s" % (self.count, self.max))
             self.start = now
+            self.end = self.start + timedelta(seconds=self.duration)
             self.count = 0
         self.count += 1
         if self.count > self.max:
